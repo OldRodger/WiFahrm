@@ -49,11 +49,11 @@ function HowItWorks() {
         <div className="mx-auto bg-primary-300 md:rounded-lg md:w-11/12">
             <div className="py-20">
                 <div className="w-5/6 md:w-1/2 mx-auto">
-                    <div className="text-center text-white mb-10">
+                    <div className="text-left md:text-center text-white mb-10">
                         <h1 className="text-3xl font-semibold mb-5">How it works</h1>
                         <p className="text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, aliquam iste ratione culpa, repellendus unde, necessitatibus non ad tenetur voluptatum dolorum atque in. Placeat, amet quod est rerum corporis molestias!</p>
                     </div>
-                    <div className='flex gap-10 flex-row md:flex-col md:gap-0'>
+                    <div className='flex gap-5 flex-row md:flex-col sm:gap-10 md:gap-0'>
                         {/* PROGRESS */}
                         <div className="relative h-[26rem] flex flex-col justify-between md:h-fit md:flex-row md:mb-10">
                             {/* PROGRESS LINE NOT ACTIVE */}
@@ -74,7 +74,7 @@ function HowItWorks() {
                         </div>
 
                         {/* TITLE AND DESCRIPTION */}
-                        <div className="flex-1 flex flex-col justify-center items-center gap-3 text-white md:flex-row md:justify-between md:gap-10">
+                        <div className="flex-1 flex flex-col justify-center md:items-center gap-3 text-white md:flex-row md:justify-between md:gap-10">
                             {/* TITLE */}
                             <h4 className='text-2xl font-semibold md:basis-1/3'>
                                 {HOW_IT_WORKS[active].title}

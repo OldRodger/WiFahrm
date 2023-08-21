@@ -12,7 +12,7 @@ body{
 
 .step-inactive,
 .step-active{
-    @apply grid place-items-center relative rounded-full h-16 w-16 border;
+    @apply grid place-items-center relative rounded-full h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 border;
 }
 
 .step-inactive{
