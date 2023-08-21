@@ -19,13 +19,13 @@ export default {
         "primary-500": "#469647",
       },
       backgroundImage:theme => ({
-        'hero-background': "url('/src/assets/svg/home-page-graphic.svg')",
-        'benefits-background': "url('/src/assets/svg/benefits-wave.svg')",
+        'hero-background': "url('./assets/svg/home-page-graphic.svg')",
+        'benefits-background': "url('./assets/svg/benefits-wave.svg')",
         "invest-background-1": "linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(44, 62, 80, .85) 70%), url('https://images.pexels.com/photos/1483880/pexels-photo-1483880.jpeg')",
         "invest-background-2": "linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(44, 62, 80, .85) 70%), url('https://images.pexels.com/photos/11588042/pexels-photo-11588042.jpeg')",
       }),
       content: {
-        dots: "url('./src/assets/img/dots.png')",
+        dots: "url('./assets/img/dots.png')",
       }
     },
     screens: {
