@@ -13,7 +13,7 @@ function Navigation({ isTopOfPage }: props) {
     const btnBackground = !isTopOfPage ? "bg-primary-500 border-primary-500" : " border-current";
 
 
-    return <header className={`flex items-center fixed top-0 w-full py-6 z-50 ${navBarBackground}`}>
+    return <header className={`hidden items-center fixed top-0 w-full py-6 z-50 md:flex ${navBarBackground}`}>
         <div className={`${flexBetween} w-5/6 mx-auto gap-28`}>
             <h1 className="">Logo</h1>
             <div className={`${flexBetween} w-full`}>
