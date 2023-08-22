@@ -1,7 +1,7 @@
 import Navigation from "@/components/navigation";
 import { NavProvider } from "@/context/navigation-context";
+import Home from "@/pages/home";
 import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
 
 function Root() {
     const [isTopOfPage, setIsTopOfPage] = useState(true);
@@ -35,11 +35,11 @@ function Root() {
                 toggleNavOpen
             }}>
                 <Navigation />
+                <main>
+                    <Home />
+                </main>
+                {/* <Footer /> */}
             </NavProvider>
-            <main>
-                <Outlet />
-            </main>
-            {/* <Footer /> */}
         </>
     );
 }
