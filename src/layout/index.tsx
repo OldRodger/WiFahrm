@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Navigation from "@/components/navigation";
 import { NavProvider } from "@/context/navigation-context";
 import Home from "@/pages/home";
@@ -38,7 +39,7 @@ function Root() {
                 <main>
                     <Home />
                 </main>
-                {/* <Footer /> */}
+                <Footer />
             </NavProvider>
         </>
     );

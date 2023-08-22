@@ -45,7 +45,7 @@ function HowItWorks() {
 
 
 
-    return <section>
+    return <section className='mt-20'>
         <div className="mx-auto bg-primary-300 md:rounded-lg md:w-11/12">
             <div className="py-20">
                 <div className="w-5/6 md:w-1/2 mx-auto">
