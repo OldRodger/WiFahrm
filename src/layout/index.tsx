@@ -1,9 +1,11 @@
 import Navigation from "@/components/navigation";
+import { NavProvider } from "@/context/navigation-context";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 function Root() {
     const [isTopOfPage, setIsTopOfPage] = useState(true);
+    const [isNavOpen, setNavOpen] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,11 +21,21 @@ function Root() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [])
 
+    const toggleNavOpen = () => {
+        setNavOpen(!isNavOpen)
+    }
+
 
 
     return (
         <>
-            <Navigation isTopOfPage={isTopOfPage} />
+            <NavProvider value={{
+                isTopOfPage,
+                isNavOpen,
+                toggleNavOpen
+            }}>
+                <Navigation />
+            </NavProvider>
             <main>
                 <Outlet />
             </main>

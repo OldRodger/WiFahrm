@@ -26,3 +26,11 @@ export type howItWorksType = {
     title: string,
     description: string
 }
+
+export interface NavContextType {
+    isTopOfPage: boolean,
+    isNavOpen: boolean,
+    toggleNavOpen: () => void
+}
+
+

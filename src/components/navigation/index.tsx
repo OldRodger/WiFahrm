@@ -1,34 +1,54 @@
 import { NAV_LINKS } from "@/constants";
-import { UserIcon } from "@heroicons/react/24/solid";
+import NavContext from "@/context/navigation-context";
+import { NavContextType } from "@/shared/types";
+import { Bars3BottomLeftIcon, UserIcon } from "@heroicons/react/24/solid";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import MobileNav from "./mobile-navigation";
 
-type props = {
-    isTopOfPage: boolean
-}
 
-function Navigation({ isTopOfPage }: props) {
+
+function Navigation() {
+    const { isTopOfPage, toggleNavOpen } = useContext(NavContext) as NavContextType;
 
     const flexBetween = "flex items-center justify-between";
-    const navBarBackground = !isTopOfPage && "bg-primary-300 bg-clip-padding shadow-sm backdrop-filter backdrop-blur-lg bg-opacity-20";
-    const btnBackground = !isTopOfPage ? "bg-primary-500 border-primary-500" : " border-current";
+    const navBarBackground = !isTopOfPage ?
+        "bg-white shadow-lg md:bg-primary-300 md:shadow-sm md:bg-opacity-20 md:backdrop-blur-lg" :
+        "bg-white shadow-lg md:bg-transparent md:shadow-none";
+    const btnStyle = !isTopOfPage ?
+        "border-primary-500 bg-primary-500 " :
+        "border-primary-300 bg-primary-300 md:border-white";
 
 
-    return <header className={`flex items-center fixed top-0 w-full py-6 z-50 ${navBarBackground}`}>
-        <div className={`${flexBetween} w-5/6 mx-auto gap-28`}>
-            <h1 className="">Logo</h1>
-            <div className={`${flexBetween} w-full`}>
-                <nav className={`${flexBetween} gap-8 text-sm`}>
-                    {NAV_LINKS.map(({ id, path, title }) => <NavLink key={id} to={path}>{title}</NavLink>)}
-                </nav>
-                <div>
-                    <Link to="/" className={`${flexBetween} ${btnBackground} border text-white capitalize py-3 px-4 cursor-pointer rounded-md gap-2 md:text-sm`}>
-                        <UserIcon className="w-4 h-4" />
-                        <span>sign up</span>
-                    </Link>
+    return <>
+        <header className="fixed w-full z-10">
+            <div className={`${navBarBackground} py-4 md:py-6`}>
+                <div className="w-5/6 mx-auto">
+                    <div className={`flex items-center justify-between gap-28 sm:gap-20 md:gap-28`}>
+                        <div className="flex items-center gap-8">
+                            <Bars3BottomLeftIcon className="w-8 h-8 text-primary-500 md:hidden" onClick={toggleNavOpen} />
+                            <h1 className="">Logo</h1>
+                        </div>
+                        <div className={`flex items-center justify-end gap-8 flex-1 md:justify-between`}>
+                            <nav className={`hidden items-center justify-between gap-8 text-sm md:flex`}>
+                                {NAV_LINKS.map(({ id, path, title }) => <NavLink key={id} to={path}>{title}</NavLink>)}
+                            </nav>
+                            <div>
+                                <Link to="/" className={`${flexBetween} ${btnStyle} capitalize text-white flex items-center gap-2 text-sm border rounded-md p-3 md:py-3 md:px-4 `}>
+                                    <UserIcon className="w-4 h-4" />
+                                    <span>sign up</span>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+            {/* MOBILE NAV */}
+            <MobileNav />
+
+        </header>
+
+    </>
 }
 
 export default Navigation;
