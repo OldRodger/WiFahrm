@@ -4,7 +4,7 @@ import BenefitCard from "./benefit-card";
 function Benefits() {
 
 
-    return <section className="bg-benefits-background bg-top bg-cover">
+    return <section className="bg-benefits-background bg-cover">
         <div className="pt-20 pb-16 md:pb-28 mx-auto w-5/6 border-b-2 border-gray-100">
             <div>
                 {/* HEADING AND BENEFITS*/}
