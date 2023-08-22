@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 function Root() {
     const [isTopOfPage, setIsTopOfPage] = useState(true);
-    const [isNavOpen, setNavOpen] = useState(true);
+    const [isNavOpen, setNavOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
