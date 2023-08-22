@@ -13,8 +13,8 @@ function Navigation() {
 
     const flexBetween = "flex items-center justify-between";
     const navBarBackground = !isTopOfPage ?
-        "bg-white shadow-lg md:bg-primary-300 md:shadow-sm md:bg-opacity-20 md:backdrop-blur-lg" :
-        "bg-white shadow-lg md:bg-transparent md:shadow-none";
+        "bg-white shadow-sm md:bg-primary-300 md:shadow-sm md:bg-opacity-20 md:backdrop-blur-lg" :
+        "bg-white shadow-sm md:bg-transparent md:shadow-none";
     const btnStyle = !isTopOfPage ?
         "border-primary-500 bg-primary-500 " :
         "border-primary-300 bg-primary-300 md:border-white";
