@@ -2,7 +2,7 @@ import { Image7 } from "@/assets";
 
 function Hero() {
     return <header className=" py-10 md:bg-hero-background bg-center bg-cover h-full">
-        <div className="w-5/6 mx-auto h-full items-center md:h-5/6 md:flex">
+        <div className="w-5/6 border-b-2 mx-auto h-full items-center md:h-5/6 md:flex md:border-none">
             {/* MAIN HEADER */}
             <div className="md:basis-3/5 mt-20 md:mt-0 flex items-center">
                 <div className="sm:w-3/5 ">
