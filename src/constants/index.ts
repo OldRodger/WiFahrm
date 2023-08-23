@@ -1,4 +1,4 @@
-import { benefitType, howItWorksType, investmentType, navLinkType } from "@/shared/types";
+import { benefitType, footerConstantType, howItWorksType, investmentType, navLinkType } from "@/shared/types";
 
 export const NAV_LINKS: navLinkType[] = [
     {
@@ -91,4 +91,74 @@ export const HOW_IT_WORKS: howItWorksType[] = [
         title: "Payment",
         description: "Description 4"
     },
+]
+
+export const FOOTER_CONSTANTS: footerConstantType[] = [
+    {
+        title: "invest",
+        links: [
+            {
+                id: "features",
+                title: "Features",
+                path: "/"
+            },
+            {
+                id: "howitworks",
+                title: "How it works",
+                path: "/"
+            },
+            {
+                id: "pricing",
+                title: "Pricing",
+                path: "/"
+            },
+            {
+                id: "login",
+                title: "Login",
+                path: "/"
+            },
+           
+        ]
+    },
+    {
+        title: "company",
+        links: [
+            {
+                id: "about",
+                title: "About us",
+                path: "/"
+            },
+            {
+                id: "team",
+                title: "Team",
+                path: "/"
+            },
+            {
+                id: "contact",
+                title: "Contact",
+                path: "/"
+            }
+        ]
+    },
+    {
+        title: "legal",
+        links: [
+            {
+                id: "privacy",
+                title: "Privacy",
+                path: "/"
+            },
+            {
+                id: "terms",
+                title: "Terms",
+                path: "/"
+            },
+            {
+                id: "security",
+                title: "Security",
+                path: "/"
+            },
+        ]
+    },
+   
 ]

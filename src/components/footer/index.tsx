@@ -1,3 +1,8 @@
+import { FOOTER_CONSTANTS } from "@/constants";
+import FooterList from "./footerList";
+import { Link } from "react-router-dom";
+import { UserIcon } from "@heroicons/react/24/solid";
+
 function Footer() {
     return <footer>
         <div className="bg-footer-wave bg-cover bg-center py-20 md:py-36">
@@ -9,9 +14,28 @@ function Footer() {
                 <div></div>
             </div>
         </div>
-        <div className="py-10 bg-gray-20">
-            <div className="w-5/6 mx-auto">
-                FOOTER
+        <div className="bg-gray-20">
+            <div className="w-5/6 mx-auto divide-y">
+                <div className="py-10">
+                    <div className="grid md:grid-cols-4">
+                        <FooterList list={FOOTER_CONSTANTS} />
+                        <div className="py-8 bg-primary-300 text-white rounded-md">
+                            <div className="w-4/5 mx-auto md:w-3/5 ">
+                                <h1 className="text-xl font-semibold mb-3">Contact us</h1>
+                                <p>Write email to us</p>
+                                <p className="mb-4">info@wifahrm.com</p>
+                                <Link to="/" className="capitalize bg-white text-primary-300 flex justify-center items-center p-3 rounded-md gap-2">
+                                    <UserIcon className="w-5 h-5" />
+                                    <span>sign up</span>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex justify-between py-14">
+                    <h1>Logo</h1>
+                    <span className="text-sm">&copy; Copyright 2023 Wifahrm</span>
+                </div>
             </div>
         </div>
     </footer>;

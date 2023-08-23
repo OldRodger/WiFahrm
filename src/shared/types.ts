@@ -27,6 +27,11 @@ export type howItWorksType = {
     description: string
 }
 
+export type footerConstantType = {
+    title: string,
+    links: navLinkType[]
+}
+
 export interface NavContextType {
     isTopOfPage: boolean,
     isNavOpen: boolean,
