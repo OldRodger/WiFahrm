@@ -1,5 +1,4 @@
-import { useSearchParams } from "react-router-dom";
-import AuthForm from "./form";
+import { Link, useSearchParams } from "react-router-dom";
 import Login from "./login";
 import SignUp from "./signup";
 
@@ -13,7 +12,9 @@ function AuthenticationPage() {
             <div className="md:flex">
                 {/* FORM */}
                 <div className="md:basis-2/3">
-                    <h1 className="mb-10">Logo</h1>
+                    <Link to="/">
+                        <h1 className="mb-10">Logo</h1>
+                    </Link>
                     {isLogin ? <Login /> : <SignUp />}
                 </div>
 

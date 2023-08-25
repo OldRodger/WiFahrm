@@ -24,7 +24,7 @@ function Footer() {
                                 <h1 className="text-xl font-semibold mb-3">Contact us</h1>
                                 <p>Write email to us</p>
                                 <p className="mb-4">info@wifahrm.com</p>
-                                <Link to="/" className="capitalize bg-white text-primary-300 flex justify-center items-center p-3 rounded-md gap-2">
+                                <Link to="/auth" className="capitalize bg-white text-primary-300 flex justify-center items-center p-3 rounded-md gap-2">
                                     <UserIcon className="w-5 h-5" />
                                     <span>sign up</span>
                                 </Link>

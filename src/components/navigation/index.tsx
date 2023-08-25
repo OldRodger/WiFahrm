@@ -34,7 +34,7 @@ function Navigation() {
                                 {NAV_LINKS.map(({ id, path, title }) => <NavLink key={id} to={path}>{title}</NavLink>)}
                             </nav>
                             <div>
-                                <Link to="/" className={`${flexBetween} ${btnStyle} capitalize text-white flex items-center gap-2 text-sm border rounded-md p-3 md:py-3 md:px-4 `}>
+                                <Link to="/auth" className={`${flexBetween} ${btnStyle} capitalize text-white flex items-center gap-2 text-sm border rounded-md p-3 md:py-3 md:px-4 `}>
                                     <UserIcon className="w-4 h-4" />
                                     <span>sign up</span>
                                 </Link>
