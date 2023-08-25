@@ -11,7 +11,7 @@ function Hero() {
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum deleniti eos itaque perferendis cumque, nisi temporibus magnam.
                     </p>
                     <button className="text-white mt-8 py-3 px-8 bg-primary-300 rounded-md">
-                        Invest Now
+                        Get started
                     </button>
                 </div>
             </div>
