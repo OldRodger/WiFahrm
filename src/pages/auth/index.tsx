@@ -51,7 +51,6 @@ export async function action({ request }) {
         }
 
         if(mode === 'login'){
-            
             const response = await loginHandler(payLoad) as AxiosResponse;
             console.log("LOGIN SUCCESSFUL");
             console.log(response.data);
