@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./layout";
-import AuthenticationPage from "./pages/auth";
+import AuthenticationPage, { action as submitAuthFormAction } from "./pages/auth";
 
 function App() {
   const router = createBrowserRouter([
@@ -8,7 +8,7 @@ function App() {
       path: "/",
       children: [
         { index: true, element: <Root /> },
-        { path: "auth", element: <AuthenticationPage /> }
+        { path: "auth", element: <AuthenticationPage />, action: submitAuthFormAction, id: "authPage" }
       ]
     }
   ])

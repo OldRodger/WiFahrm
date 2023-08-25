@@ -18,10 +18,10 @@ export default {
         "primary-300": "#62b466",
         "primary-500": "#469647",
       },
-      backgroundImage:theme => ({
+      backgroundImage: theme => ({
         'hero-background': "url('./assets/svg/home-page-graphic.svg')",
         'benefits-background': "url('./assets/svg/benefits-wave.svg')",
-        "footer-wave":"url('./assets/svg/footer-wave.svg')",
+        "footer-wave": "url('./assets/svg/footer-wave.svg')",
         "invest-background-1": "linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(44, 62, 80, .85) 70%), url('https://images.pexels.com/photos/1483880/pexels-photo-1483880.jpeg')",
         "invest-background-2": "linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(44, 62, 80, .85) 70%), url('https://images.pexels.com/photos/11588042/pexels-photo-11588042.jpeg')",
       }),
@@ -29,7 +29,7 @@ export default {
         dots: "url('./assets/img/dots.png')",
       },
       transitionTimingFunction: {
-        "in-cubic-bezier" : "cubic-bezier(0.48, -0.28, 0.41, 1.4)"
+        "in-cubic-bezier": "cubic-bezier(0.48, -0.28, 0.41, 1.4)"
       }
     },
     screens: {

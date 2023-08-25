@@ -2,7 +2,7 @@ import { Form } from "react-router-dom";
 import FormInput from "./forminput";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Login({ errorMsg }: { errorMsg: string }) {
     return <div className="space-y-8">
         <div className="text-center space-y-2 text-gray-600">
             <h1 className="text-xl">Hello, Friend!</h1>
@@ -10,7 +10,7 @@ function Login() {
             <p className="text-sm text-gray-500">To keep connecting with us please login with your personal info</p>
         </div>
 
-        <Form>
+        <Form method="POST">
             <div className="w-full space-y-5">
                 <div className="space-y-4">
 
@@ -25,7 +25,7 @@ function Login() {
                         icon="lock"
                         props={{
                             placeholder: "Pasword",
-                            name: "userPassWord",
+                            name: "userPassword",
                             type: "password"
                         }} />
                 </div>

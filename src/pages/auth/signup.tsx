@@ -1,10 +1,28 @@
-import { Form } from "react-router-dom";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
+import { Form, Link } from "react-router-dom";
 import FormInput from "./forminput";
-import { Link } from "react-router-dom";
 
-function SignUp() {
+function SignUp({ errorMsg}: { errorMsg: string }) {
+    const formOneInitialState = {
+        firstName: '',
+        lastName: '',
+        userName: ''
+    }
+
     const [count, setCount] = useState(1);
+    const [formOneState, setFormOneState] = useState(formOneInitialState);
+
+
+
+    const formOneChangeHandler = (e: FormEvent<HTMLInputElement>) => {
+        const { name, value } = e.currentTarget;
+        setFormOneState({
+            ...formOneState,
+            [name]: value
+        })
+    }
+
+    const isFormOneValid = Object.values(formOneState).every(val => val.trim().length)
     let activeProgress = "w-0"
     let stepStyle = "bg-white text-current";
     let formStyle = "translate-x-0"
@@ -20,7 +38,7 @@ function SignUp() {
             <h1 className="text-4xl font-semibold text-gray-600">Create Account</h1>
             <p className="text-sm text-gray-500">Let's get you all set up so you can access your personal account</p>
         </div>
-        <div className="flex justify-between relative text-primary-300">
+        <div className="w-3/5 mx-auto flex justify-between relative text-primary-300">
             {/* PROGRESS */}
             <div className="absolute h-1 w-full bg-gray-20 -translate-y-1/2 top-1/2"></div>
             {/* ACTIVE PROGRESS */}
@@ -35,38 +53,51 @@ function SignUp() {
             </span>
         </div>
 
-        <Form>
+        <Form method="post">
             <div className="overflow-hidden">
                 <div className={`${formStyle} transition-transform duration-300 ease-in-cubic-bezier flex w-[200%] gap-2`}>
                     {/* FORM PART 1 */}
                     <div className="w-full space-y-5">
                         <div className="space-y-4">
                             {/* FIRST NAME */}
-                            <FormInput props={{
-                                placeholder: "First Name",
-                                name: "firstName"
-                            }} />
+                            <FormInput
+                                onChange={formOneChangeHandler}
+                                props={{
+                                    placeholder: "First Name",
+                                    name: "firstName",
+                                    value: formOneState.firstName
+                                }} />
 
                             {/* LAST NAME */}
-                            <FormInput props={{
-                                placeholder: "Last Name",
-                                name: "lastName"
-                            }} />
+                            <FormInput
+                                onChange={formOneChangeHandler}
+                                props={{
+                                    placeholder: "Last Name",
+                                    name: "lastName",
+                                    value: formOneState.lastName
+
+                                }} />
 
                             {/* USER NAME */}
-                            <FormInput props={{
-                                placeholder: "Username",
-                                name: "userName"
-                            }} />
+                            <FormInput
+                                onChange={formOneChangeHandler}
+                                props={{
+                                    placeholder: "Username",
+                                    name: "userName",
+                                    value: formOneState.userName
+
+                                }} />
                         </div>
+                        <p className="text-red-500 text-sm mb-4">{errorMsg || ""}</p>
 
                         <div className="text-right">
                             <button
                                 type="button"
-                                className="px-8 py-3 bg-primary-300 text-white rounded-md"
+                                className="px-8 py-3 bg-primary-300 text-white rounded-md disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
                                 onClick={() => setCount(2)}
+                                disabled={!isFormOneValid}
                             >
-                                Next
+                                Continue
                             </button>
                         </div>
                         <div className="text-center">
@@ -76,6 +107,8 @@ function SignUp() {
                             </p>
                         </div>
                     </div>
+
+
                     {/* FORM PART 2 */}
                     <div className="w-full space-y-5">
                         <div className="space-y-4">
@@ -102,7 +135,7 @@ function SignUp() {
                                 icon="lock"
                                 props={{
                                     placeholder: "Pasword",
-                                    name: "userPassWord",
+                                    name: "password",
                                     type: "password"
                                 }} />
 
@@ -111,18 +144,18 @@ function SignUp() {
                                 icon="lock"
                                 props={{
                                     placeholder: "Confirm Pasword",
-                                    name: "userPassWordConfirm",
+                                    name: "passwordConfirm",
                                     type: "password"
                                 }} />
                         </div>
-
+                        <p className="text-red-500 text-sm mb-4">{errorMsg || ""}</p>
                         <div className="flex justify-between">
                             <button
                                 type="button"
                                 className="px-8 py-3 bg-gray-300 text-gray-500 rounded-md"
                                 onClick={() => setCount(1)}
                             >
-                                Prev
+                                Back
                             </button>
                             <button
                                 type="submit"

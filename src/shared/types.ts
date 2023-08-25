@@ -38,4 +38,8 @@ export interface NavContextType {
     toggleNavOpen: () => void
 }
 
+export enum AuthEndPoint {
+    NewUser = "/api/registration/registerNewUser",
+    UserLogin = "/auth/login",
 
+}
