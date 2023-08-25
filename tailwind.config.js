@@ -27,6 +27,9 @@ export default {
       }),
       content: {
         dots: "url('./assets/img/dots.png')",
+      },
+      transitionTimingFunction: {
+        "in-cubic-bezier" : "cubic-bezier(0.48, -0.28, 0.41, 1.4)"
       }
     },
     screens: {

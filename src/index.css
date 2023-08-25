@@ -22,3 +22,8 @@ body{
 .step-active{
     @apply bg-white text-primary-300 border-white;
 }
+
+
+.form-input{
+    @apply bg-gray-100 text-gray-500 p-5 flex gap-3 items-center rounded-md;
+}
