@@ -8,7 +8,7 @@ function AuthenticationPage() {
 
 
     return <section className="bg-white py-10 items-center justify-center md:flex ">
-        <div className="mx-auto w-5/6">
+        <div className="mx-auto w-[88%] xs:w-5/6">
             <div className="md:flex">
                 {/* FORM */}
                 <div className="md:basis-2/3">

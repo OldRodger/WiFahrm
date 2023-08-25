@@ -37,7 +37,7 @@ function SignUp() {
 
         <Form>
             <div className="overflow-hidden">
-                <div className={`${formStyle} transition-transform duration-300 ease-in-cubic-bezier flex w-[200%]`}>
+                <div className={`${formStyle} transition-transform duration-300 ease-in-cubic-bezier flex w-[200%] gap-2`}>
                     {/* FORM PART 1 */}
                     <div className="w-full space-y-5">
                         <div className="space-y-4">
