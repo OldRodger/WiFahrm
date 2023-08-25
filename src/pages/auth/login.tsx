@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 function Login() {
     return <div className="space-y-8">
-        <div className="text-center space-y-2">
+        <div className="text-center space-y-2 text-gray-600">
             <h1 className="text-xl">Hello, Friend!</h1>
             <h1 className="text-4xl font-semibold">Welcome Back</h1>
-            <p className="text-sm">To keep connecting with us please login with your personal info</p>
+            <p className="text-sm text-gray-500">To keep connecting with us please login with your personal info</p>
         </div>
 
         <Form>

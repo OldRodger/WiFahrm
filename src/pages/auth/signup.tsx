@@ -17,8 +17,8 @@ function SignUp() {
 
     return <div className="space-y-8">
         <div className="text-center space-y-2">
-            <h1 className="text-4xl font-semibold">Create Account</h1>
-            <p className="text-sm">Let's get you all set up so you can access your personal account</p>
+            <h1 className="text-4xl font-semibold text-gray-600">Create Account</h1>
+            <p className="text-sm text-gray-500">Let's get you all set up so you can access your personal account</p>
         </div>
         <div className="flex justify-between relative text-primary-300">
             {/* PROGRESS */}
@@ -37,7 +37,7 @@ function SignUp() {
 
         <Form>
             <div className="overflow-hidden">
-                <div className={`${formStyle} transition-transform duration-300 ease-in-cubic-bezier flex w-[200%] gap-2`}>
+                <div className={`${formStyle} transition-transform duration-300 ease-in-cubic-bezier flex w-[200%]`}>
                     {/* FORM PART 1 */}
                     <div className="w-full space-y-5">
                         <div className="space-y-4">
